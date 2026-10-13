@@ -59,13 +59,13 @@ window.SEMINAARI = {
 Hinnat näkyvät myös lippukorteissa (`<div class="card">`) samalla sivulla. Päivitä molemmat kohdat.
 **Holvin tuotteen hinnan pitää aina olla sama kuin sivulla.**
 
-### Holvi-linkit (täytetään, kun tuotteet on julkaistu)
+### Holvi-linkit
 
 | Paikkamerkki | Tiedosto | Holvi-tuote | Hinta |
 |---|---|---|---|
-| `HOLVI_LINKKI_PUOLUSTUS_YRITYS` | puolustus.html | Yrityslippu – Puolustusalan seminaari 14.1.2027 | 390 € |
-| `HOLVI_LINKKI_MOLEMMAT_YRITYS` | puolustus.html, kasvu.html | Molemmat seminaarit – Yrityslippu | 700 € |
-| `HOLVI_LINKKI_PUOLUSTUS_3` | puolustus.html | 3 lippua – Puolustusalan seminaari 14.1.2027 | 1 000 € |
+| ✅ `https://holvi.com/shop/kirsilehto/product/3575a949d08936ff895dcc2daa77395c/` | puolustus.html | Yrityslippu – Puolustusalan seminaari 14.1.2027 | 390 € |
+| ✅ `https://holvi.com/shop/kirsilehto/product/29a79d50ad71131787589d6ca171136a/` | puolustus.html, kasvu.html | Molemmat seminaarit – Yrityslippu | 700 € |
+| ✅ `https://holvi.com/shop/kirsilehto/product/63d7841f84b4aee8773481b9bc2c5423/` | puolustus.html | 3 lippua – Puolustusalan seminaari 14.1.2027 | 1 000 € |
 | `HOLVI_LINKKI_KASVU_YRITYS` | kasvu.html | *ei vielä luotu* | 390 € |
 | `HOLVI_LINKKI_KASVU_3` | kasvu.html | *ei vielä luotu* | 1 000 € |
 | `HOLVI_LINKKI_20` … `_250`, `_10` | tue.html | *lahjoitustuotteet, ei vielä luotu* | 20–250 € |
