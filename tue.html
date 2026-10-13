@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tue Kirsin kampanjaa | Kirsi Lehto</title>
+<meta name="description" content="Jokainen euro menee Kirsi Lehdon eduskuntavaalikampanjaan Hämeen vaalipiirissä. Tue haluamallasi summalla.">
+<meta property="og:title" content="Kirsiä kehiin! Tue kampanjaa">
+<meta property="og:image" content="kuvat/kirsi.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kirsi.css">
+</head>
+<body>
+
+<div class="topline"><span>KANSALLINEN KOKOOMUS</span><span>EDUSKUNTAVAALIEHDOKAS KIRSI LEHTO</span></div>
+<header class="navbar"><div class="wrap">
+  <a class="brand" href="https://www.kirsilehto.fi/">KIRSI LEHTO</a>
+  <nav aria-label="Päävalikko"><a href="index.html">Seminaarit</a><a href="tue.html" aria-current="page">Tue kampanjaa</a><a href="https://www.kirsilehto.fi/">Kirsin sivuille</a></nav>
+  <a class="btn" href="index.html">Seminaarit</a>
+</div></header>
+
+<div class="pagehead">
+  <p class="kicker">Ehdolla eduskuntaan 2027, Hämeen vaalipiiri</p>
+  <h1>Tue kampanjaa</h1>
+  <p>Jokainen euro menee vaalityöhön Hämeen vaalipiirissä. Valitse summa, maksu vie alle minuutin.</p>
+</div>
+
+<main class="give">
+  <div class="give-photo">
+    <img src="kuvat/kirsi.webp" alt="Kirsi Lehto">
+    <blockquote>"[Lyhyt henkilökohtainen lause Kirsiltä: miksi tuki merkitsee.]"
+      <cite>KIRSI LEHTO</cite></blockquote>
+  </div>
+
+  <div>
+    <div class="sig">Kirsiä kehiin!</div>
+    <p class="lead">Tuellasi teemme Kirsin tunnetuksi koko Hämeen vaalipiirissä: esitteet, somemainonta, tapahtumat ja vaalitelttapäivät.</p>
+
+    <!-- MUOKKAA: data-link = Holvi-tuotteen osoite -->
+    <fieldset class="amounts" id="amountForm">
+      <legend class="lbl">Valitse summa</legend>
+      <label class="amt"><input type="radio" name="a" data-link="HOLVI_LINKKI_20" data-sum="20">
+        <span class="sum">20 €</span><span class="what">[200 esitettä kotiovelle]</span></label>
+      <label class="amt"><input type="radio" name="a" data-link="HOLVI_LINKKI_50" data-sum="50" checked>
+        <span class="pop">Suosituin</span>
+        <span class="sum">50 €</span><span class="what">[Päivän somemainonta Kanta-Hämeessä]</span></label>
+      <label class="amt"><input type="radio" name="a" data-link="HOLVI_LINKKI_100" data-sum="100">
+        <span class="sum">100 €</span><span class="what">[Vaaliteltan päivä torilla]</span></label>
+      <label class="amt"><input type="radio" name="a" data-link="HOLVI_LINKKI_250" data-sum="250">
+        <span class="sum">250 €</span><span class="what">[Lehti-ilmoitus paikallislehdessä]</span></label>
+      <label class="amt other"><input type="radio" name="a" data-link="HOLVI_LINKKI_10" data-sum="oma">
+        <span class="sum">Oma summa</span><span class="what">Valitse kassalla, montako 10 euron osuutta haluat antaa.</span></label>
+    </fieldset>
+
+    <a class="btn k-cta" id="giveBtn" href="#">Tue 50 eurolla</a>
+    <p class="trustline">Maksu turvallisesti Holvissa: luottokortti, verkkopankki tai MobilePay. Kuitti sähköpostiisi.</p>
+  </div>
+</main>
+
+<section class="rules"><div class="wrap">
+  <div>
+    <h3>Mihin raha menee</h3>
+    <p>[Esim. vaaliesitteet, somemainonta, tapahtumat ja vaalitelttapäivät.] Kaikki tuet ja kulut raportoidaan vaalirahoitusilmoituksessa.</p>
+  </div>
+  <div>
+    <h3>Lahjoittamisen säännöt</h3>
+    <p>Samalta tukijalta voidaan ottaa vastaan enintään 6 000 euroa. Yli 2 000 euron tukien antajat ilmoitetaan julkisesti vaalirahoitusilmoituksessa.</p>
+  </div>
+  <div>
+    <h3>Tilisiirrolla</h3>
+    <p>Onnistuu myös. Kirjoita viestiin nimesi.</p>
+    <div class="bank">Saaja: <b>[Kirsi Lehdon tukiryhmä ry]</b><br>IBAN: <b>[FI00 0000 0000 0000 00]</b><br>Viesti: <b>Lahjoitus + nimesi</b></div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="t">OTA YHTEYTTÄ</div>
+  <p>kirsi.lehto (at) hmlkaupunki.fi<br>+358 503 142 815</p>
+</footer>
+<div class="org" style="padding-bottom:24px">Varat vastaanottaa: [Kirsi Lehdon tukiryhmä ry, Y-tunnus]</div>
+
+<script>
+  const f = document.getElementById('amountForm');
+  const b = document.getElementById('giveBtn');
+  function update(){
+    const s = f.querySelector('input:checked');
+    b.href = s.dataset.link;
+    b.textContent = s.dataset.sum === 'oma' ? 'Tue omalla summalla' : 'Tue ' + s.dataset.sum + ' eurolla';
+  }
+  f.addEventListener('change', update);
+  update();
+</script>
+</body>
+</html>

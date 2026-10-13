@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kiitos – lippusi on matkalla | Kirsi Lehto</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="kirsi.css">
+</head>
+<body>
+
+<header class="navbar"><div class="wrap">
+  <a class="brand" href="https://www.kirsilehto.fi/">KIRSI LEHTO</a>
+  <nav aria-label="Päävalikko"><a href="index.html">Seminaarit</a><a href="tue.html">Tue kampanjaa</a><a href="https://www.kirsilehto.fi/">Kirsin sivuille</a></nav>
+</div></header>
+
+<div class="pagehead">
+  <p class="kicker" id="k-nimi">Seminaari</p>
+  <h1>Kiitos!</h1>
+  <p>Nähdään <b id="k-pvm">pian</b>. Lippusi ja kuitti ovat matkalla sähköpostiisi. Jos viestiä ei näy muutamassa minuutissa, tarkista roskaposti.</p>
+</div>
+
+<main class="thanks">
+  <ul>
+    <li><div class="t">Lisää kalenteriin<span id="k-paikka">Hämeenlinna</span></div>
+      <a class="btn soft" id="k-ics" download="seminaari.ics" href="#">Lisää</a></li>
+    <li><div class="t">Kutsu kollega mukaan<span>Jaa seminaarin linkki</span></div>
+      <button class="btn soft" id="k-share">Jaa</button></li>
+    <li><div class="t">Tue Kirsin kampanjaa<span>Jokainen euro menee vaalityöhön</span></div>
+      <a class="btn" href="tue.html">Tue</a></li>
+  </ul>
+  <div class="sig" style="text-align:center;margin-top:28px">Kirsiä kehiin!</div>
+</main>
+
+<footer>
+  <div class="t">OTA YHTEYTTÄ</div>
+  <p>kirsi.lehto (at) hmlkaupunki.fi<br>+358 503 142 815</p>
+</footer>
+
+<script>
+// Holvin kiitosviestiin linkki muodossa: https://[osoite]/kiitos.html?e=puolustus  tai  ?e=kasvu
+const TAP = {
+  puolustus: { nimi:"Puolustusalan seminaari: Mihin menet Eurooppa – mihin Suomi?", pvm:"torstaina 14.1.2027 klo 13", alku:"20270114T130000", loppu:"20270114T160000", paikka:"Upseerikerho, Vuorikatu 26, Hämeenlinna", url:"puolustus.html" },
+  kasvu:     { nimi:"Kasvuseminaari", pvm:"XX.XX.2027", alku:"20270101T120000", loppu:"20270101T160000", paikka:"[Paikka], Hämeenlinna", url:"kasvu.html" }
+};
+const t = TAP[new URLSearchParams(location.search).get('e')] || TAP.puolustus;
+document.getElementById('k-pvm').textContent = t.pvm;
+document.getElementById('k-nimi').textContent = t.nimi;
+document.getElementById('k-paikka').textContent = t.paikka;
+const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//kirsilehto//FI","BEGIN:VEVENT",
+  "UID:"+t.alku+"@kirsilehto.fi","DTSTAMP:20261012T000000Z","DTSTART;TZID=Europe/Helsinki:"+t.alku,"DTEND;TZID=Europe/Helsinki:"+t.loppu,
+  "SUMMARY:"+t.nimi,"LOCATION:"+t.paikka,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+document.getElementById('k-ics').href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
+document.getElementById('k-share').addEventListener('click', async () => {
+  const url = new URL(t.url, location.href).href;
+  try { if (navigator.share) await navigator.share({ title: t.nimi, url }); else { await navigator.clipboard.writeText(url); alert('Linkki kopioitu'); } } catch(e) {}
+});
+</script>
+</body>
+</html>

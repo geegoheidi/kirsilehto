@@ -1,0 +1,9 @@
+# Netlify-asetukset: staattinen sivu, ei build-vaihetta.
+[build]
+  publish = "."
+
+# Siistit osoitteet: /tue näyttää tue.html:n jne.
+[[headers]]
+  for = "/kuvat/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
