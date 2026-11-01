@@ -32,14 +32,18 @@ Wix (kirsilehto.fi) ──linkit──▶ seminaarit.kirsilehto.fi ja tue.kirsil
 | Tiedosto | Mitä se on |
 |---|---|
 | `index.html` | Seminaarit-listaus (seminaarit.kirsilehto.fi) |
-| `puolustus.html` | Puolustusalan seminaari 14.1.2027 |
-| `kasvu.html` | Kasvuseminaari (sisältö vielä paikkamerkkeinä) |
+| `puolustus.html` | 1. Kansallinen puolustusalan seminaari 14.1.2027 (sininen) |
+| `kasvu.html` | 1. Kansallinen talouskasvun seminaari 17.2.2027 (vihreä teema: `<body class="teema-kasvu">`) |
 | `tue.html` | Lahjoitussivu (tue.kirsilehto.fi) |
-| `kiitos.html` | Kiitossivu maksun jälkeen, kalenterilinkki. `?e=puolustus` tai `?e=kasvu` |
+| `kiitos.html` | Kiitossivu maksun jälkeen, kalenterilinkki. `?e=puolustus`, `?e=kasvu` tai `?e=molemmat` |
 | `kirsi.css` | Kaikkien sivujen yhteinen tyyli (värit, fontit) |
 | `kassa.js` | Kassapaneeli: lipunvalinta, hinta, Holvi-linkki, laskupyyntölomake |
 | `_redirects` | Netlify-sääntö: tue.kirsilehto.fi näyttää `tue.html`:n |
 | `kuvat/` | Puhujakuvat (webp, 320×400, kasvot samassa kohdassa) |
+
+**Sisältö:** seminaarisivujen otsikot, nimet, väliotsikot ja tekstit ovat sanatarkasti seminaarien PDF-materiaalista (Canva, 22.10.2026). Älä muokkaa tekstejä ilman hyväksyntää.
+
+**Teemat:** värit ovat `kirsi.css`:n alussa muuttujina. `.teema-kasvu` vaihtaa ne vihreiksi (#01925E / #01784E). Saman luokan voi antaa yksittäiselle elementille, kuten index-sivun kortille.
 
 ## 3. Yleisimmät muutokset
 
@@ -59,34 +63,29 @@ window.SEMINAARI = {
 Hinnat näkyvät myös lippukorteissa (`<div class="card">`) samalla sivulla. Päivitä molemmat kohdat.
 **Holvin tuotteen hinnan pitää aina olla sama kuin sivulla.**
 
-### Holvi-linkit
+### Holvi-tuotteet ja linkit
 
-| Paikkamerkki | Tiedosto | Holvi-tuote | Hinta |
-|---|---|---|---|
-| ✅ `https://holvi.com/shop/kirsilehto/product/3575a949d08936ff895dcc2daa77395c/` | puolustus.html | Yrityslippu – Puolustusalan seminaari 14.1.2027 | 390 € |
-| ✅ `https://holvi.com/shop/kirsilehto/product/29a79d50ad71131787589d6ca171136a/` | puolustus.html, kasvu.html | Molemmat seminaarit – Yrityslippu | 700 € |
-| ✅ `https://holvi.com/shop/kirsilehto/product/63d7841f84b4aee8773481b9bc2c5423/` | puolustus.html | 3 lippua – Puolustusalan seminaari 14.1.2027 | 1 000 € |
-| `HOLVI_LINKKI_KASVU_YRITYS` | kasvu.html | *ei vielä luotu* | 390 € |
-| `HOLVI_LINKKI_KASVU_3` | kasvu.html | *ei vielä luotu* | 1 000 € |
-| `HOLVI_LINKKI_20` … `_250`, `_10` | tue.html | *lahjoitustuotteet, ei vielä luotu* | 20–250 € |
+| Holvi-tuote | Sivu / id | Hinta |
+|---|---|---|
+| Yrityslippu – 1. Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `yksi` | 390 € |
+| Molemmat seminaarit – Yrityslippu (14.1. + 17.2.2027) | puolustus.html + kasvu.html `molemmat` | 700 € |
+| 3 lippua – 1. Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `kolme` | 1 000 € |
+| Yrityslippu – 1. Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `yksi` | 390 € |
+| 3 lippua – 1. Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `kolme` | 1 000 € |
+| *lahjoitustuotteet, ei vielä luotu* | tue.html `HOLVI_LINKKI_20` … | 20–250 € |
 
-Niin kauan kuin linkki on paikkamerkki, kassa näyttää keltaisen huomautuksen eikä nappi toimi.
+Linkit ovat sivujen `window.SEMINAARI`-lohkossa. Niin kauan kuin linkki on paikkamerkki (`HOLVI_…`), kassa näyttää keltaisen huomautuksen eikä nappi toimi.
 
 ### Uusi puhuja tai kuva
 1. Kuva `kuvat/`-kansioon, **320×400 px, webp**, kasvot suunnilleen samankokoisina kuin muissa.
 2. Lisää puhuja heroon (`<div class="sp">`) ja ohjelmaan (`<article class="item">`).
-
-### Kasvuseminaarin julkaisu
-1. Täytä `kasvu.html`:n hakasulkeiset kohdat ja `kiitos.html`:n `kasvu`-rivi (päivä, kellonaika, paikka).
-2. Luo Holviin kasvuseminaarin tuotteet ja lisää linkit.
-3. `index.html`: poista kasvukortista `soon`-luokka ja leima, ja muuta kortti linkiksi (`<a class="sem" href="kasvu.html">`) kuten puolustuskortti.
 
 ## 4. Holvi
 
 - **Tili:** Kasvun Tekijät ry. **Kauppa:** holvi.com/shop/kirsilehto (osoitetta ei voi muuttaa).
 - **Tulokategoria:** Seminaarilipputulot. Näin lipputulot erottuvat kirjanpidossa ja vaalirahoitusraportissa.
 - **Tuotteiden lisäkysymykset:** yrityksen nimi ja Y-tunnus (pakollinen) sekä osallistujan nimi.
-- **Kuittiviesti** sisältää kiitossivun linkin `https://seminaarit.kirsilehto.fi/kiitos.html?e=puolustus`.
+- **Kuittiviesti** sisältää kiitossivun linkin `https://seminaarit.kirsilehto.fi/kiitos.html?e=puolustus` (kasvu: `?e=kasvu`, molemmat: `?e=molemmat`).
 - **ALV:** yhdistystä ei ole merkitty Holviin ALV-velvolliseksi, joten hinnat ovat lopullisia. Jos tämä muuttuu, päivitä Holvin kirjanpitoasetukset, kaupan myyntiehdot ja sivujen `alv`-arvo.
 - **Verkkokaupan ehtojen hyväksyntä ja käyttäjähallinta** vaativat Holvissa tilin ylläpitäjän oikeudet.
 

@@ -41,18 +41,20 @@
 </footer>
 
 <script>
-// Holvin kiitosviestiin linkki muodossa: https://[osoite]/kiitos.html?e=puolustus  tai  ?e=kasvu
+// Holvin kuittiviestiin linkki: https://seminaarit.kirsilehto.fi/kiitos.html?e=puolustus | ?e=kasvu | ?e=molemmat
 const TAP = {
-  puolustus: { nimi:"Puolustusalan seminaari: Mihin menet Eurooppa – mihin Suomi?", pvm:"torstaina 14.1.2027 klo 13", alku:"20270114T130000", loppu:"20270114T160000", paikka:"Upseerikerho, Vuorikatu 26, Hämeenlinna", url:"puolustus.html" },
-  kasvu:     { nimi:"Kasvuseminaari", pvm:"XX.XX.2027", alku:"20270101T120000", loppu:"20270101T160000", paikka:"[Paikka], Hämeenlinna", url:"kasvu.html" }
+  puolustus: { nimi:"1. Kansallinen puolustusalan seminaari: Mihin menet Eurooppa - mihin Suomi?", pvm:"torstaina 14.1.2027 klo 13 (kahvit 12:30)", alku:"20270114T123000", loppu:"20270114T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"puolustus.html" },
+  kasvu:     { nimi:"1. Kansallinen talouskasvun seminaari: Rohkeutta ja energiaa -mitä tarvitset Suomi?", pvm:"keskiviikkona 17.2.2027 klo 13", alku:"20270217T130000", loppu:"20270217T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"kasvu.html" },
+  molemmat:  { nimi:"1. Kansallinen puolustusalan seminaari 14.1.2027 ja 1. Kansallinen talouskasvun seminaari 17.2.2027", pvm:"14.1. ja 17.2.2027", alku:"20270114T123000", loppu:"20270114T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"index.html" }
 };
 const t = TAP[new URLSearchParams(location.search).get('e')] || TAP.puolustus;
 document.getElementById('k-pvm').textContent = t.pvm;
 document.getElementById('k-nimi').textContent = t.nimi;
 document.getElementById('k-paikka').textContent = t.paikka;
-const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//kirsilehto//FI","BEGIN:VEVENT",
-  "UID:"+t.alku+"@kirsilehto.fi","DTSTAMP:20261012T000000Z","DTSTART;TZID=Europe/Helsinki:"+t.alku,"DTEND;TZID=Europe/Helsinki:"+t.loppu,
-  "SUMMARY:"+t.nimi,"LOCATION:"+t.paikka,"END:VEVENT","END:VCALENDAR"].join("\r\n");
+const ev = e => ["BEGIN:VEVENT","UID:"+e.alku+"@kirsilehto.fi","DTSTAMP:20261101T000000Z","DTSTART;TZID=Europe/Helsinki:"+e.alku,
+  "DTEND;TZID=Europe/Helsinki:"+e.loppu,"SUMMARY:"+e.nimi,"LOCATION:"+e.paikka.replace(/,/g,"\\,"),"END:VEVENT"];
+const tapahtumat = t === TAP.molemmat ? [TAP.puolustus, TAP.kasvu] : [t];
+const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//kirsilehto//FI"].concat(...tapahtumat.map(ev), ["END:VCALENDAR"]).join("\r\n");
 document.getElementById('k-ics').href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
 document.getElementById('k-share').addEventListener('click', async () => {
   const url = new URL(t.url, location.href).href;
