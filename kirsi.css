@@ -466,3 +466,34 @@ footer .flogo{height:26px;width:auto;margin:0 auto 18px}
   .rules .wrap.two{grid-template-columns:1fr}
   .give.mp .give-photo{order:2;margin-top:0}
 }
+
+/* ===== Tue-sivu v2 (Designer: Tue-v2) ===== */
+.tuehead{padding:56px 24px 120px}
+.tuehead .avatar{position:relative;width:176px;height:176px;margin:0 auto 18px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 6px rgba(255,255,255,.18),0 18px 40px rgba(5,10,80,.35)}
+.tuehead .avatar img{width:100%;height:100%;object-fit:cover}
+.tuehead .avatar::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--t1),.28) 0%,rgba(var(--t1),.05) 45%,rgba(var(--t3),.35) 100%)}
+.mp2{max-width:920px;margin:-72px auto 0;padding:0 24px;position:relative}
+.mp2 .mp-card{gap:40px;border:0;border-radius:14px;padding:36px 40px;box-shadow:0 24px 60px rgba(var(--t3),.18)}
+.mp2 .mp-qr img{width:220px;height:220px}
+.mp2 .mp-info .k{color:var(--a);font-size:13px;letter-spacing:.16em}
+.mp2 .lbl2{font-size:15px;font-weight:600;color:var(--muted)}
+.mp2 .mp-info .num{font-size:72px}
+.mp2 .mp-info .who{font-size:18px}
+.mp2 .mp-open{display:inline-block;align-self:flex-start;margin-top:12px;background:var(--a)}
+.mp2 .mp-open:hover{background:var(--a-d)}
+.mp-steps2{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:s}
+.mp-steps2 li{counter-increment:s;background:var(--bg);border-radius:10px;padding:22px 20px;display:flex;flex-direction:column;gap:8px}
+.mp-steps2 li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center;font-family:var(--sans);font-weight:900;font-size:15px}
+.mp-steps2 b{font-family:var(--sans);font-weight:800;font-size:16px}
+.mp-steps2 span{font-size:18px;line-height:1.4}
+.mp2 + .rules{margin-top:72px}
+@media (max-width:860px){
+  .tuehead{padding:40px 20px 100px}
+  .tuehead .avatar{width:132px;height:132px}
+  .mp2{padding:0 16px}
+  .mp2 .mp-card{grid-template-columns:1fr;text-align:center;justify-items:center;padding:28px 20px}
+  .mp2 .mp-info{align-items:center}
+  .mp2 .mp-info .num{font-size:56px}
+  .mp2 .mp-open{align-self:stretch}
+  .mp-steps2{grid-template-columns:1fr 1fr}
+}

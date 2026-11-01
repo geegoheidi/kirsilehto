@@ -1,1 +1,8 @@
-https://tue.kirsilehto.fi/  /tue.html  200!
+# tue.kirsilehto.fi näyttää lahjoitussivun
+https://tue.kirsilehto.fi/  /tue  200!
+
+# Siistit osoitteet ilman .html-päätettä (vanhat linkit ohjautuvat uusiin)
+/puolustus.html  /puolustus  301!
+/kasvu.html      /kasvu      301!
+/kiitos.html     /kiitos     301!
+/tue.html        /tue        301!
