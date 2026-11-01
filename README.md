@@ -74,6 +74,8 @@ Hinnat näkyvät myös lippukorteissa (`<div class="card">`) samalla sivulla. P�
 | 3 lippua – Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `kolme` | 1 000 € |
 | *lahjoitustuotteet, ei vielä luotu* | tue.html `HOLVI_LINKKI_20` … | 20–250 € |
 
+Tuote-id:t (osoite `https://holvi.com/shop/kirsilehto/product/<id>/`): puolustus yksi `3575a949…`, molemmat `29a79d50…`, puolustus 3 lippua `63d7841f…`, kasvu yksi `0394681e…`, kasvu 3 lippua `8779e169…`.
+
 Linkit ovat sivujen `window.SEMINAARI`-lohkossa. Niin kauan kuin linkki on paikkamerkki (`HOLVI_…`), kassa näyttää keltaisen huomautuksen eikä nappi toimi.
 
 ### Uusi puhuja tai kuva
