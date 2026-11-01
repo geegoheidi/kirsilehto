@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Myyjän tilausilmoitus | Kirsi Lehdon seminaarit</title>
+<!-- Sisäinen sivu ulkoisille myyjille: ei hakukoneisiin, ei sitemapiin, ei linkkejä muilta sivuilta -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14223f;--muted:#55627a;--line:#d3dce8;--bg:#f2f4f7;--sky:#e3eef9;--sky2:#cfe2f5;--a:#2c5282;--a-d:#1f3c63;--ok:#2e7d4f;--sans:Montserrat,system-ui,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 24px;background:#fff;border-bottom:1px solid var(--line)}
+.top img{height:26px;width:auto}
+.top span{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--muted)}
+.head{background:linear-gradient(180deg,var(--sky) 0%,var(--bg) 100%);padding:48px 24px 28px}
+.head .in,.main{max-width:760px;margin:0 auto}
+.badge{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:800;letter-spacing:.16em;padding:7px 12px;border-radius:4px}
+h1{margin:14px 0 10px;font-size:clamp(28px,4vw,40px);font-weight:900;line-height:1.1}
+.lead{margin:0;font-size:17px;line-height:1.6;color:var(--muted);max-width:40em}
+.how{margin:22px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.how li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.5}
+.how b{display:block;font-size:13px;letter-spacing:.08em;color:var(--a);margin-bottom:4px}
+.note{margin:16px 0 0;font-size:13px;color:var(--muted)}
+.main{padding:8px 24px 64px}
+form,.done{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px;display:flex;flex-direction:column;gap:26px}
+fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+legend{padding:0;margin-bottom:12px;font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--a);text-transform:uppercase}
+legend small{display:block;margin-top:4px;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;background:var(--sky);border-radius:8px;padding:16px}
+.grid.gray{background:var(--bg)}
+.full{grid-column:1/-1}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:14px;font-weight:600}
+label.f em{font-style:normal;font-weight:400;color:var(--muted)}
+input,textarea{font:400 15px var(--sans);border:1px solid #b9c7d6;border-radius:6px;padding:11px 12px;color:var(--ink);background:#fff;width:100%}
+input:focus,textarea:focus{outline:3px solid var(--sky2);border-color:var(--a)}
+.prod{display:grid;grid-template-columns:auto minmax(0,1fr) auto 92px;align-items:center;gap:14px;border:1px solid var(--line);border-radius:8px;padding:12px 14px;cursor:pointer;background:#fff}
+.prod:has(input[type=checkbox]:checked){border-color:var(--a);background:var(--sky);box-shadow:0 0 0 1px var(--a)}
+.prod input[type=checkbox]{width:20px;height:20px;accent-color:var(--a);margin:0}
+.prod .n{font-weight:700;font-size:15px}
+.prod .s{font-size:13px;color:var(--muted);margin-top:2px}
+.prod .p{font-weight:800;font-size:15px;white-space:nowrap}
+.prod .q{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.prod .q input{padding:8px;text-align:center;max-width:92px}
+.prod .q input:disabled{background:var(--bg);color:#9aa5b8}
+.tot{display:flex;justify-content:space-between;align-items:flex-end;border-top:2px dashed var(--line);padding-top:18px}
+.tot .l{font-weight:700}
+.tot .l small{display:block;font-weight:500;font-size:13px;color:var(--muted);margin-top:2px}
+.tot .sum{font-size:38px;font-weight:900;line-height:1}
+.ok{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.5}
+.ok input{width:18px;height:18px;margin-top:2px;accent-color:var(--a);flex:none}
+.btn{border:0;cursor:pointer;background:var(--ink);color:#fff;font:800 15px var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:18px;border-radius:6px}
+.btn:hover{background:var(--a-d)}
+.err{display:none;color:#a12a2a;font-size:14px}
+.done{display:none;text-align:center;align-items:center}
+.done .ic{width:56px;height:56px;border-radius:50%;background:var(--ok);position:relative}
+.done .ic::after{content:"";position:absolute;left:20px;top:14px;width:12px;height:22px;border:solid #fff;border-width:0 4px 4px 0;transform:rotate(45deg)}
+.done h2{margin:0;font-size:24px}
+.done p{margin:0;color:var(--muted);line-height:1.6;max-width:34em}
+body.sent form{display:none}body.sent .done{display:flex}
+footer{text-align:center;font-size:13px;color:var(--muted);padding:0 24px 40px}
+footer a{color:var(--a)}
+@media (max-width:700px){
+  .how{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .prod{grid-template-columns:auto minmax(0,1fr);row-gap:8px}
+  .prod .p,.prod .q{grid-column:2}
+  form,.done{padding:20px}
+  .top span{display:none}
+}
+</style>
+</head>
+<body>
+<div class="top"><img src="/kuvat/kokoomus-logo.webp" alt="Kokoomus" width="180" height="26"><span>KIRSI LEHDON SEMINAARIT · SISÄINEN</span></div>
+
+<header class="head"><div class="in">
+  <span class="badge">ULKOINEN MYYJÄ</span>
+  <h1>Myyjän tilausilmoitus</h1>
+  <p class="lead">Olet myynyt lippuja Kirsi Lehdon seminaareihin. Ilmoita kauppa tällä lomakkeella, niin hoidamme laskutuksen asiakkaalle ja kirjaamme myynnin nimellesi provisiota varten.</p>
+  <p class="note">Sivu on tarkoitettu vain myyjille. Älä jaa linkkiä asiakkaille: asiakkaat ostavat liput osoitteesta seminaarit.kirsilehto.fi.</p>
+</div></header>
+
+<main class="main">
+<form name="myyjailmoitus" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="m-form">
+  <input type="hidden" name="form-name" value="myyjailmoitus">
+  <input type="hidden" name="subject" id="m-subject" value="ULKOINEN MYYJÄ: laskupyyntö">
+  <input type="hidden" name="lahde" value="Ulkoinen myyjä">
+  <input type="hidden" name="tapahtuma" id="m-tapahtuma">
+  <input type="hidden" name="lippu" id="m-lippu">
+  <input type="hidden" name="summa" id="m-summa">
+  <p hidden><label>Älä täytä: <input name="bot-field"></label></p>
+
+  <fieldset>
+    <legend>Myyjä<small>Myynti kirjataan näillä tiedoilla provisiota varten.</small></legend>
+    <div class="grid gray">
+      <label class="f">Myyjän nimi<input name="myyja" required autocomplete="name"></label>
+      <label class="f">Myyjän sähköposti<input type="email" name="myyja_email" required autocomplete="email"></label>
+    </div>
+  </fieldset>
+
+  <fieldset id="m-prods">
+    <legend>Myydyt liput<small>Rastita kaikki, mitä myit tälle asiakkaalle. Hinnat ovat lopullisia, eikä niihin lisätä arvonlisäveroa.</small></legend>
+    <!-- data-h = hinta euroina, data-t = tapahtumat (p = puolustus, k = kasvu) -->
+    <label class="prod"><input type="checkbox" value="Puolustus yrityslippu" data-h="390" data-t="p">
+      <div><div class="n">Puolustusalan seminaari, yrityslippu</div><div class="s">14.1.2027 · 1 osallistuja</div></div>
+      <div class="p">390 €</div><div class="q"><input type="number" min="1" value="1" aria-label="Kappalemäärä" disabled> kpl</div></label>
+    <label class="prod"><input type="checkbox" value="Talouskasvu yrityslippu" data-h="390" data-t="k">
+      <div><div class="n">Talouskasvun seminaari, yrityslippu</div><div class="s">17.2.2027 · 1 osallistuja</div></div>
+      <div class="p">390 €</div><div class="q"><input type="number" min="1" value="1" aria-label="Kappalemäärä" disabled> kpl</div></label>
+    <label class="prod"><input type="checkbox" value="Molemmat seminaarit" data-h="700" data-t="pk">
+      <div><div class="n">Molemmat seminaarit</div><div class="s">14.1. + 17.2.2027 · 1 osallistuja</div></div>
+      <div class="p">700 €</div><div class="q"><input type="number" min="1" value="1" aria-label="Kappalemäärä" disabled> kpl</div></label>
+    <label class="prod"><input type="checkbox" value="Puolustus 3 lippua" data-h="1000" data-t="p">
+      <div><div class="n">Puolustusalan seminaari, 3 lippua</div><div class="s">14.1.2027 · 3 osallistujaa</div></div>
+      <div class="p">1 000 €</div><div class="q"><input type="number" min="1" value="1" aria-label="Kappalemäärä" disabled> kpl</div></label>
+    <label class="prod"><input type="checkbox" value="Talouskasvu 3 lippua" data-h="1000" data-t="k">
+      <div><div class="n">Talouskasvun seminaari, 3 lippua</div><div class="s">17.2.2027 · 3 osallistujaa</div></div>
+      <div class="p">1 000 €</div><div class="q"><input type="number" min="1" value="1" aria-label="Kappalemäärä" disabled> kpl</div></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Asiakas ja laskutus<small>Laskutamme asiakasta näillä tiedoilla. Vahvistus lähtee yhteyshenkilön sähköpostiin.</small></legend>
+    <div class="grid">
+      <label class="f">Yrityksen nimi<input name="yritys" required autocomplete="organization"></label>
+      <label class="f">Y-tunnus<input name="ytunnus" required placeholder="1234567-8" pattern="\d{7}-\d"></label>
+      <label class="f full">Verkkolaskuosoite tai laskutussähköposti<input name="laskutusosoite" required></label>
+      <label class="f">Yhteyshenkilön nimi<input name="yhteyshenkilo" required></label>
+      <label class="f">Yhteyshenkilön sähköposti<input type="email" name="email" required></label>
+      <label class="f full">Osallistujien nimet <em>voi täydentää myöhemmin</em><textarea name="osallistujat" rows="3"></textarea></label>
+      <label class="f full">Lisätiedot laskutukseen <em>esim. asiakkaan viite tai tilausnumero</em><textarea name="lisatiedot" rows="2"></textarea></label>
+    </div>
+  </fieldset>
+
+  <div class="tot">
+    <div class="l">Yhteensä<small id="m-count">Ei valittuja lippuja</small></div>
+    <div class="sum" id="m-sum">0 €</div>
+  </div>
+
+  <label class="ok"><input type="checkbox" name="vahvistus" value="Asiakas on hyväksynyt tilauksen" required>Asiakas on hyväksynyt tilauksen ja hinnat, ja tiedot ovat oikein.</label>
+
+  <button class="btn" type="submit">Lähetä tilausilmoitus</button>
+  <div class="err" id="m-err">Valitse vähintään yksi lippu.</div>
+  <div class="err" id="m-err2">Lähetys ei onnistunut. Lähetä tiedot sähköpostilla: <a href="mailto:kasvuntekijat@gmail.com">kasvuntekijat@gmail.com</a></div>
+</form>
+
+<div class="done" role="status">
+  <div class="ic" aria-hidden="true"></div>
+  <h2>Kiitos, myynti on kirjattu!</h2>
+  <p>Asiakkaan yhteyshenkilö saa vahvistuksen sähköpostiin, ja lähetämme laskun 1–2 arkipäivän kuluessa. Myynti on kirjattu nimellesi provisiota varten.</p>
+  <button class="btn" type="button" id="m-new">Ilmoita uusi myynti</button>
+</div>
+</main>
+
+<footer>Kysyttävää? <a href="mailto:kasvuntekijat@gmail.com">kasvuntekijat@gmail.com</a> · Kasvun Tekijät ry</footer>
+
+<script>
+(() => {
+  const form = document.getElementById('m-form');
+  const rows = [...document.querySelectorAll('#m-prods .prod')];
+  const eur = n => n.toLocaleString('fi-FI').replace(/\s/g, ' ') + ' €';
+  const NIMI = { p: 'Kansallinen puolustusalan seminaari 14.1.2027', k: 'Kansallinen talouskasvun seminaari 17.2.2027' };
+
+  function update() {
+    let sum = 0, kpl = 0; const items = [], ev = new Set();
+    rows.forEach(r => {
+      const cb = r.querySelector('input[type=checkbox]'), q = r.querySelector('input[type=number]');
+      q.disabled = !cb.checked;
+      if (!cb.checked) return;
+      const n = Math.max(1, parseInt(q.value, 10) || 1), h = +cb.dataset.h;
+      sum += n * h; kpl += n;
+      items.push(n + ' × ' + cb.value + ' (' + eur(h) + ')');
+      [...cb.dataset.t].forEach(t => ev.add(t));
+    });
+    document.getElementById('m-sum').textContent = eur(sum);
+    document.getElementById('m-count').textContent = kpl ? items.length + ' tuotetta, ' + kpl + ' kpl' : 'Ei valittuja lippuja';
+    document.getElementById('m-lippu').value = items.join(', ');
+    document.getElementById('m-summa').value = eur(sum);
+    document.getElementById('m-tapahtuma').value = ['p', 'k'].filter(t => ev.has(t)).map(t => NIMI[t]).join(' + ');
+    return sum;
+  }
+  form.addEventListener('input', update);
+  form.addEventListener('change', update);
+  // Klikkaus kappalemäärään ei saa vaihtaa rastia
+  rows.forEach(r => r.querySelector('.q').addEventListener('click', e => e.preventDefault()));
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    document.getElementById('m-err').style.display = 'none';
+    document.getElementById('m-err2').style.display = 'none';
+    if (!update()) { document.getElementById('m-err').style.display = 'block'; return; }
+    const f = new FormData(form);
+    document.getElementById('m-subject').value = 'ULKOINEN MYYJÄ: laskupyyntö – ' + f.get('yritys') + ' – ' + f.get('summa') + ' – myyjä ' + f.get('myyja');
+    try {
+      const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString() });
+      if (!res.ok) throw new Error(res.status);
+      document.body.classList.add('sent'); window.scrollTo(0, 0);
+    } catch (err) {
+      document.getElementById('m-err2').style.display = 'block';
+    }
+  });
+  document.getElementById('m-new').addEventListener('click', () => {
+    const m = form.myyja.value, me = form.myyja_email.value;
+    form.reset(); form.myyja.value = m; form.myyja_email.value = me; update();
+    document.body.classList.remove('sent'); window.scrollTo(0, 0);
+  });
+  update();
+})();
+</script>
+</body>
+</html>

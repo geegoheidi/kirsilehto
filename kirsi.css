@@ -362,6 +362,7 @@ a.sem:hover h2{text-decoration:underline;text-underline-offset:4px}
 .talk .ti{font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:2px}
 .talk h3{margin:0;font-family:var(--sans);font-weight:900;font-size:26px;line-height:1.18;text-transform:uppercase;color:var(--a)}
 .talk.lite h3{text-transform:none;font-size:24px}
+.talk .st{margin:-4px 0 0;font-family:var(--sans);font-weight:700;font-size:19px;line-height:1.35;color:var(--ink,#101a4a)}
 .talk .quote{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;margin:4px 0 0}
 .talk .quote::before{content:"\201C";font-family:Georgia,serif;font-size:72px;line-height:.8;color:var(--a)}
 .talk .quote p{margin:0;font-size:24px;line-height:1.45;font-style:italic;font-weight:500}

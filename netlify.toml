@@ -7,3 +7,9 @@
   for = "/kuvat/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# Myyjien sisäinen lomake: ei hakukoneisiin
+[[headers]]
+  for = "/myyjat*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
