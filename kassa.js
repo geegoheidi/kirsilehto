@@ -67,4 +67,7 @@
     const b = e.target.closest('[data-osta]');
     if (b) open(b.dataset.osta);
   });
+  // Suora linkki kassaan, esim. puolustus.html#osta-molemmat
+  const h = location.hash.match(/^#osta-(\w+)$/);
+  if (h) open(h[1]);
 })();
