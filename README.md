@@ -137,3 +137,9 @@ Kaikki tilit on tarkoitus pitää **yhdistyksen nimissä, ei henkilökohtaisina*
 - `robots.txt` ja `sitemap.xml` ovat juuressa, ja kiitossivu on `noindex`.
 - Jos jakokuva ei päivity LinkedInissä tai Facebookissa, pakota uusi haku: LinkedIn Post Inspector (linkedin.com/post-inspector) ja Facebook Sharing Debugger (developers.facebook.com/tools/debug). WhatsApp käyttää välimuistia, joten uusi kuva näkyy vasta jonkin ajan päästä.
 - Sitemapin voi lähettää Googlelle Search Consolessa (search.google.com/search-console). Se vaatii domainin vahvistuksen DNS:ssä.
+
+## 10. Laskupyynnöt
+
+1. Kassan "Lasku yritykselle" -lomake tallentuu Netlifyyn (Forms → laskupyynto). Netlify lähettää ilmoituksen osoitteeseen kasvuntekijat@gmail.com.
+2. Zapier (kirjautuminen Googlella, kasvuntekijat@gmail.com) lähettää asiakkaalle automaattisen vahvistuksen Gmailista. Zap: "Laskupyyntö → vahvistus asiakkaalle". Ilmaisversiossa 100 viestiä/kk.
+3. Lasku tehdään käsin Holvissa: Laskutus → Uusi lasku. Tiedot (yritys, Y-tunnus, verkkolaskuosoite, lippu, summa) löytyvät Netlifyn ilmoitusviestistä.
