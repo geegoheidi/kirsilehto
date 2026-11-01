@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /kiitos
+
+Sitemap: https://seminaarit.kirsilehto.fi/sitemap.xml

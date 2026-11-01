@@ -129,3 +129,11 @@ Kaikki tilit on tarkoitus pitää **yhdistyksen nimissä, ei henkilökohtaisina*
 2. Paina jokaista "Osta lippu" -nappia ja tarkista, että hinta on sama kassassa ja Holvissa.
 3. Tee yksi oikea osto halvimmalla tuotteella, tarkista kuitti ja kiitossivun linkki ja hyvitä osto Holvista.
 4. Lähetä testilaskupyyntö ja varmista, että sähköposti tulee perille.
+
+## 9. Hakukoneet ja jakokuvat
+
+- Jokaisella sivulla on oma `<title>`, kuvaus, `canonical`-osoite sekä Open Graph- ja Twitter-tagit. Linkin jakokuva on `kuvat/og-*.jpg` (1200×630).
+- Seminaarisivuilla on Event-rakenteinen data (JSON-LD): päivä, paikka, puhujat ja lippuhinnat. Google voi näyttää ne tapahtumahaussa.
+- `robots.txt` ja `sitemap.xml` ovat juuressa, ja kiitossivu on `noindex`.
+- Jos jakokuva ei päivity LinkedInissä tai Facebookissa, pakota uusi haku: LinkedIn Post Inspector (linkedin.com/post-inspector) ja Facebook Sharing Debugger (developers.facebook.com/tools/debug). WhatsApp käyttää välimuistia, joten uusi kuva näkyy vasta jonkin ajan päästä.
+- Sitemapin voi lähettää Googlelle Search Consolessa (search.google.com/search-console). Se vaatii domainin vahvistuksen DNS:ssä.

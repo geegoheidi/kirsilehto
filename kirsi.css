@@ -518,3 +518,6 @@ footer .flogo{height:26px;width:auto;margin:0 auto 18px}
   .hero-ad .n b{font-size:12px}
   .hero-ad .hero-text .in{padding:12px 20px 96px}
 }
+
+/* "Kirsiä kehiin!" ilman kaunokirjoitusfonttia */
+.sig{font-family:var(--sans) !important;font-weight:900;font-size:18px !important;letter-spacing:.14em;text-transform:uppercase;color:var(--a)}
