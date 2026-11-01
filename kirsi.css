@@ -327,3 +327,70 @@ a.sem:hover h2{text-decoration:underline;text-underline-offset:4px}
   .facts{border-radius:14px;flex-direction:column;align-items:flex-start;padding:16px 20px}
   .item.coffee .t{width:auto}
 }
+
+/* ===== Uusi ilme (marraskuu 2026): logo, faktakortti, kysymykset, sitaatit ===== */
+.topline{align-items:center;max-width:1180px;margin:0 auto;padding:16px 24px}
+.topline .logo{height:30px;width:auto}
+.topline span{font-weight:600;font-size:13px;letter-spacing:.1em;color:var(--a)}
+.hero-text .in{padding-bottom:128px}
+.factcard{max-width:1080px;margin:-64px auto 0;padding:0 24px;position:relative;z-index:2}
+.factcard .in{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,.9fr);align-items:center;background:#fff;border-radius:10px;
+  box-shadow:0 20px 50px rgba(var(--t3),.18);font-family:var(--sans);overflow:hidden}
+.factcard .f{padding:24px 28px;border-right:1px solid var(--line)}
+.factcard small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--muted)}
+.factcard b{display:block;font-size:20px;font-weight:800;margin-top:4px}
+.factcard span{display:block;font-size:13px;color:var(--muted)}
+.factcard .go{padding:20px 24px}
+.factcard .go .btn{display:block;width:100%;padding:18px 12px;border-radius:6px}
+.intro2{max-width:1180px;margin:0 auto;padding:96px 24px 88px}
+.intro2 .cols{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:start}
+.intro2 .lead{margin:0;font-size:30px;line-height:1.4;font-weight:500}
+.intro2 .meta{margin:22px 0 0;font-family:var(--sans);font-size:16px;line-height:1.6;color:var(--muted)}
+.intro2 .box{background:var(--bg);border-radius:10px;padding:32px 32px 28px;display:flex;flex-direction:column;gap:18px}
+.intro2 .q{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;align-items:baseline}
+.intro2 .q b{font-family:var(--sans);font-weight:900;font-size:26px;color:var(--a)}
+.intro2 .q span{font-size:23px;line-height:1.35;font-weight:600}
+.intro2 .box p{margin:0;font-size:22px;line-height:1.5}
+.intro2 .cta-line{margin:56px 0 0;text-align:center;font-family:var(--sans);font-weight:800;font-size:22px;color:var(--a)}
+.items .item,.items .talk{border-radius:10px}
+.talk{display:grid;grid-template-columns:84px 200px minmax(0,1fr);gap:32px;background:#fff;padding:32px 28px}
+.talk.lite{grid-template-columns:84px 150px minmax(0,1fr);align-items:center;padding:24px 28px}
+.talk .ph{width:200px;height:250px;object-fit:cover;border-radius:6px}
+.talk.lite .ph{width:150px;height:188px}
+.talk .tx{display:flex;flex-direction:column;gap:14px;min-width:0}
+.talk .nm{font-family:var(--sans);font-weight:800;font-size:19px}
+.talk .ti{font-family:var(--sans);font-size:14px;color:var(--muted);margin-top:2px}
+.talk h3{margin:0;font-family:var(--sans);font-weight:900;font-size:26px;line-height:1.18;text-transform:uppercase;color:var(--a)}
+.talk.lite h3{text-transform:none;font-size:24px}
+.talk .quote{display:grid;grid-template-columns:40px minmax(0,1fr);gap:8px;margin:4px 0 0}
+.talk .quote::before{content:"\201C";font-family:Georgia,serif;font-size:72px;line-height:.8;color:var(--a)}
+.talk .quote p{margin:0;font-size:24px;line-height:1.45;font-style:italic;font-weight:500}
+.talk .bio{margin-top:8px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--sans)}
+.talk .bio .lb{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.talk .bio p{margin:6px 0 0;font-size:14px;line-height:1.65;color:var(--muted)}
+.item.panel{align-items:center;padding:28px}
+.item.panel .tx h3{font-size:26px;margin:0}
+.item.panel .who{font-weight:800;font-size:13px}
+.item.host-row,.items .item.host-row{border-radius:10px}
+footer .flogo{height:26px;width:auto;margin:0 auto 18px}
+@media (max-width:860px){
+  .topline{display:flex;padding:12px 16px}
+  .topline span{display:none}
+  .topline .logo{height:24px}
+  .hero-text .in{padding-bottom:96px}
+  .factcard{margin-top:-48px;padding:0 16px}
+  .factcard .in{grid-template-columns:1fr}
+  .factcard .f{border-right:0;border-bottom:1px solid var(--line);padding:16px 20px}
+  .intro2{padding:56px 20px 56px}
+  .intro2 .cols{grid-template-columns:1fr;gap:28px}
+  .intro2 .lead{font-size:24px}
+  .intro2 .box{padding:24px 20px}
+  .intro2 .q span{font-size:20px}
+  .talk,.talk.lite{grid-template-columns:1fr;gap:16px;padding:22px 20px}
+  .talk>.t:empty{display:none}
+  .talk .ph,.talk.lite .ph{width:120px;height:150px}
+  .talk h3{font-size:21px}
+  .talk .quote p{font-size:20px}
+  .talk .quote{grid-template-columns:28px minmax(0,1fr)}
+  .talk .quote::before{font-size:54px}
+}
