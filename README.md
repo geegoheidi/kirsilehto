@@ -34,7 +34,7 @@ Wix (kirsilehto.fi) ──linkit──▶ seminaarit.kirsilehto.fi ja tue.kirsil
 | `index.html` | Seminaarit-listaus (seminaarit.kirsilehto.fi) |
 | `puolustus.html` | Kansallinen puolustusalan seminaari 14.1.2027 (sininen) |
 | `kasvu.html` | Kansallinen talouskasvun seminaari 17.2.2027 (vihreä teema: `<body class="teema-kasvu">`) |
-| `tue.html` | Lahjoitussivu (tue.kirsilehto.fi) |
+| `tue.html` | Lahjoitussivu (tue.kirsilehto.fi): MobilePay 47849 "Kirsi Eduskuntaan!" (Kasvun tekijät ry), QR `kuvat/mobilepay-qr.png` |
 | `kiitos.html` | Kiitossivu maksun jälkeen, kalenterilinkki. `?e=puolustus`, `?e=kasvu` tai `?e=molemmat` |
 | `kirsi.css` | Kaikkien sivujen yhteinen tyyli (värit, fontit) |
 | `kassa.js` | Kassapaneeli: lipunvalinta, hinta, Holvi-linkki, laskupyyntölomake |
@@ -72,7 +72,6 @@ Hinnat näkyvät myös lippukorteissa (`<div class="card">`) samalla sivulla. P�
 | 3 lippua – Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `kolme` | 1 000 € |
 | Yrityslippu – Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `yksi` | 390 € |
 | 3 lippua – Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `kolme` | 1 000 € |
-| *lahjoitustuotteet, ei vielä luotu* | tue.html `HOLVI_LINKKI_20` … | 20–250 € |
 
 Tuote-id:t (osoite `https://holvi.com/shop/kirsilehto/product/<id>/`): puolustus yksi `3575a949…`, molemmat `29a79d50…`, puolustus 3 lippua `63d7841f…`, kasvu yksi `0394681e…`, kasvu 3 lippua `8779e169…`.
 
