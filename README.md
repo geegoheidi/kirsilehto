@@ -32,8 +32,8 @@ Wix (kirsilehto.fi) ──linkit──▶ seminaarit.kirsilehto.fi ja tue.kirsil
 | Tiedosto | Mitä se on |
 |---|---|
 | `index.html` | Seminaarit-listaus (seminaarit.kirsilehto.fi) |
-| `puolustus.html` | 1. Kansallinen puolustusalan seminaari 14.1.2027 (sininen) |
-| `kasvu.html` | 1. Kansallinen talouskasvun seminaari 17.2.2027 (vihreä teema: `<body class="teema-kasvu">`) |
+| `puolustus.html` | Kansallinen puolustusalan seminaari 14.1.2027 (sininen) |
+| `kasvu.html` | Kansallinen talouskasvun seminaari 17.2.2027 (vihreä teema: `<body class="teema-kasvu">`) |
 | `tue.html` | Lahjoitussivu (tue.kirsilehto.fi) |
 | `kiitos.html` | Kiitossivu maksun jälkeen, kalenterilinkki. `?e=puolustus`, `?e=kasvu` tai `?e=molemmat` |
 | `kirsi.css` | Kaikkien sivujen yhteinen tyyli (värit, fontit) |
@@ -67,11 +67,11 @@ Hinnat näkyvät myös lippukorteissa (`<div class="card">`) samalla sivulla. P�
 
 | Holvi-tuote | Sivu / id | Hinta |
 |---|---|---|
-| Yrityslippu – 1. Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `yksi` | 390 € |
+| Yrityslippu – Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `yksi` | 390 € |
 | Molemmat seminaarit – Yrityslippu (14.1. + 17.2.2027) | puolustus.html + kasvu.html `molemmat` | 700 € |
-| 3 lippua – 1. Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `kolme` | 1 000 € |
-| Yrityslippu – 1. Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `yksi` | 390 € |
-| 3 lippua – 1. Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `kolme` | 1 000 € |
+| 3 lippua – Kansallinen puolustusalan seminaari 14.1.2027 | puolustus.html `kolme` | 1 000 € |
+| Yrityslippu – Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `yksi` | 390 € |
+| 3 lippua – Kansallinen talouskasvun seminaari 17.2.2027 | kasvu.html `kolme` | 1 000 € |
 | *lahjoitustuotteet, ei vielä luotu* | tue.html `HOLVI_LINKKI_20` … | 20–250 € |
 
 Linkit ovat sivujen `window.SEMINAARI`-lohkossa. Niin kauan kuin linkki on paikkamerkki (`HOLVI_…`), kassa näyttää keltaisen huomautuksen eikä nappi toimi.

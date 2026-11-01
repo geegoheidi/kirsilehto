@@ -44,9 +44,9 @@
 <script>
 // Holvin kuittiviestiin linkki: https://seminaarit.kirsilehto.fi/kiitos.html?e=puolustus | ?e=kasvu | ?e=molemmat
 const TAP = {
-  puolustus: { nimi:"1. Kansallinen puolustusalan seminaari: Mihin menet Eurooppa - mihin Suomi?", pvm:"torstaina 14.1.2027 klo 13 (kahvit 12:30)", alku:"20270114T123000", loppu:"20270114T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"puolustus.html" },
-  kasvu:     { nimi:"1. Kansallinen talouskasvun seminaari: Rohkeutta ja energiaa -mitä tarvitset Suomi?", pvm:"keskiviikkona 17.2.2027 klo 13", alku:"20270217T130000", loppu:"20270217T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"kasvu.html" },
-  molemmat:  { nimi:"1. Kansallinen puolustusalan seminaari 14.1.2027 ja 1. Kansallinen talouskasvun seminaari 17.2.2027", pvm:"14.1. ja 17.2.2027", alku:"20270114T123000", loppu:"20270114T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"index.html" }
+  puolustus: { nimi:"Kansallinen puolustusalan seminaari: Mihin menet Eurooppa - mihin Suomi?", pvm:"torstaina 14.1.2027 klo 13 (kahvit 12:30)", alku:"20270114T123000", loppu:"20270114T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"puolustus.html" },
+  kasvu:     { nimi:"Kansallinen talouskasvun seminaari: Rohkeutta ja energiaa -mitä tarvitset Suomi?", pvm:"keskiviikkona 17.2.2027 klo 13", alku:"20270217T130000", loppu:"20270217T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"kasvu.html" },
+  molemmat:  { nimi:"Kansallinen puolustusalan seminaari 14.1.2027 ja Kansallinen talouskasvun seminaari 17.2.2027", pvm:"14.1. ja 17.2.2027", alku:"20270114T123000", loppu:"20270114T160000", paikka:"Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna", url:"index.html" }
 };
 const t = TAP[new URLSearchParams(location.search).get('e')] || TAP.puolustus;
 document.getElementById('k-pvm').textContent = t.pvm;
