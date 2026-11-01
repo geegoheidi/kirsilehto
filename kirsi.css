@@ -503,7 +503,7 @@ footer .flogo{height:26px;width:auto;margin:0 auto 18px}
 .teema-kasvu .hero-ad{--hero:#3d8a5e;--hero-rgb:61,138,94}
 .hero-ad .ad{position:relative;max-width:1240px;margin:0 auto}
 .hero-ad .ad img{width:100%;height:auto}
-.hero-ad .ad::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12%;background:linear-gradient(180deg,rgba(var(--hero-rgb),0),var(--hero))}
+.hero-ad .ad::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(180deg,rgba(var(--hero-rgb),0),var(--hero))}
 .hero-ad .names{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .hero-ad .n{position:relative}
 .hero-ad .lbl{position:absolute;left:4px;right:4px;bottom:var(--b);text-align:center;font-family:var(--sans);color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.25)}
