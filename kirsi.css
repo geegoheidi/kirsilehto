@@ -521,3 +521,12 @@ footer .flogo{height:26px;width:auto;margin:0 auto 18px}
 
 /* "Kirsiä kehiin!" ilman kaunokirjoitusfonttia */
 .sig{font-family:var(--sans) !important;font-weight:900;font-size:18px !important;letter-spacing:.14em;text-transform:uppercase;color:var(--a)}
+
+/* ===== Seminaarit-listauksen kortit: sama mainoskuva kuin headerissa ===== */
+.sem-top.hero-ad{display:block;padding:0;gap:0}
+.sem-top.hero-ad .ad{max-width:none}
+.sem-top.hero-ad .lbl{bottom:72%}
+.sem-top.hero-ad .n b{font-size:clamp(11px,1.15vw,16px);line-height:1.15}
+.sem-top.hero-ad .ad::after{height:26%}
+.sem-top.hero-ad img{aspect-ratio:1600/637;height:auto;object-fit:cover;object-position:center top;border-radius:0}
+.sem.teema-kasvu .sem-top.hero-ad .lbl{bottom:68%}
