@@ -142,4 +142,5 @@ Kaikki tilit on tarkoitus pitää **yhdistyksen nimissä, ei henkilökohtaisina*
 
 1. Kassan "Lasku yritykselle" -lomake tallentuu Netlifyyn (Forms → laskupyynto). Netlify lähettää ilmoituksen osoitteeseen kasvuntekijat@gmail.com.
 2. Zapier (kirjautuminen Googlella, kasvuntekijat@gmail.com) lähettää asiakkaalle automaattisen vahvistuksen Gmailista. Zap: "Laskupyyntö → vahvistus asiakkaalle". Ilmaisversiossa 100 viestiä/kk.
+   - Vahvistuksen sisältö: otsikko "Tilausvahvistus: [tapahtuma]"; tilaus vastaanotettu, aika (kahvitus klo 12.30, ohjelma klo 13.00–16.00), paikka (Museo Militaria, Tykkihalli, Vanhankaupunginkatu 19, Hämeenlinna) + karttalinkki, sisäänpääsy (ei lippua, ovella kerrotaan yrityksen tai oman nimen), tilauksen tiedot (lippu, summa, yritys, osallistujat). Vastaukset menevät osoitteeseen kasvuntekijat@gmail.com.
 3. Lasku tehdään käsin Holvissa: Laskutus → Uusi lasku. Tiedot (yritys, Y-tunnus, verkkolaskuosoite, lippu, summa) löytyvät Netlifyn ilmoitusviestistä.
