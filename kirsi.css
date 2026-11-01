@@ -394,3 +394,45 @@ footer .flogo{height:26px;width:auto;margin:0 auto 18px}
   .talk .quote{grid-template-columns:28px minmax(0,1fr)}
   .talk .quote::before{font-size:54px}
 }
+
+/* ===== Seminaarit-listaus, uusi ilme ===== */
+.pagehead{padding-bottom:120px}
+.seminars{margin-top:-80px;gap:28px;align-items:stretch}
+.sem{border-radius:12px}
+.sem-top{padding:24px 24px 0;text-decoration:none;gap:10px}
+.sem-top .f{margin:0}
+.sem-top figcaption{position:absolute;left:0;right:0;bottom:8px;z-index:1;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;color:#fff;letter-spacing:.02em}
+.sem-body{padding:30px 32px 34px;gap:14px}
+.sem h2{font-size:clamp(26px,2.6vw,34px);line-height:1.06}
+.sem h2 a{color:inherit;text-decoration:none}
+.sem h2 a:hover{text-decoration:underline;text-underline-offset:5px}
+.sem-facts{margin:6px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;font-family:var(--sans)}
+.sem-facts div{background:var(--bg);padding:12px 16px}
+.sem-facts .wide{grid-column:1/-1}
+.sem-facts dt{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.sem-facts dd{margin:2px 0 0;font-size:16px;font-weight:800;line-height:1.35}
+.sem-facts dd span{display:block;font-size:13px;font-weight:500;color:var(--muted)}
+.sem p{font-size:21px;line-height:1.45}
+.sem-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.sem-ctas .btn{flex:1 1 180px;margin:0}
+.btn.ghost{background:transparent;color:var(--a);box-shadow:inset 0 0 0 2px var(--a)}
+.btn.ghost:hover{background:var(--bg)}
+.combo{max-width:1120px;margin:-48px auto 88px;padding:0 24px}
+.combo .in{display:flex;flex-wrap:wrap;align-items:center;gap:20px 36px;background:linear-gradient(120deg,var(--a) 0%,var(--a) 55%,#01784E 100%);color:#fff;border-radius:12px;padding:28px 32px;font-family:var(--sans)}
+.combo .tx{flex:1 1 280px}
+.combo .k{font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--soft2)}
+.combo h2{margin:4px 0;font-weight:900;font-size:26px;text-transform:uppercase}
+.combo p{margin:0;font-size:15px;color:var(--soft)}
+.combo .pr b{font-weight:900;font-size:44px;line-height:1}
+.combo .pr span{font-size:15px;margin-left:6px}
+.combo .btn{padding:18px 28px}
+@media (max-width:860px){
+  .pagehead{padding-bottom:96px}
+  .seminars{margin-top:-64px;padding:0 16px 72px}
+  .sem-body{padding:24px 20px 26px}
+  .sem-top{padding:16px 16px 0;gap:6px}
+  .sem-top figcaption{font-size:10px}
+  .combo{margin-top:-40px;padding:0 16px}
+  .combo .in{padding:24px 20px}
+  .combo .btn{width:100%}
+}
