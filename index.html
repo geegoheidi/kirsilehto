@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/kirsi.css?v=20261101m">
+<link rel="stylesheet" href="/kirsi.css?v=20261105a">
 </head>
 <body>
 
@@ -46,7 +46,11 @@
 <div class="pagehead">
   <p class="kicker">Kirsi Lehto kutsuu</p>
   <h1>Seminaarit</h1>
-  <p>Kaksi seminaaria Museo Militarian Tykkihallissa Hämeenlinnassa. Tule kuulemaan ja keskustelemaan alan eturivin asiantuntijoiden ja päättäjien kanssa!</p>
+  <p>Kaksi seminaaria historiallisessa Tykkihallissa Hämeen linnan kupeessa. Tule kuulemaan ja keskustelemaan alan eturivin asiantuntijoiden ja päättäjien kanssa!</p>
+  <nav class="jump" aria-label="Siirry seminaariin">
+    <a class="btn light" href="#sem-puolustus">Puolustusseminaari</a>
+    <a class="btn kasvu" href="#sem-kasvu">Talousseminaari</a>
+  </nav>
 </div>
 
 <main class="seminars" id="seminaarit">
@@ -54,7 +58,7 @@
     <a class="sem-top hero-ad" href="https://seminaarit.kirsilehto.fi/puolustus" tabindex="-1" aria-hidden="true"><div class="ad"><img src="/kuvat/hero-puolustus-v3.webp" alt="" width="1600" height="699" loading="lazy"><div class="names"><div class="n"><div class="lbl"><b>Katleena<br>Kortesuo</b></div></div><div class="n"><div class="lbl"><b>Timo<br>Rotonen</b></div></div><div class="n"><div class="lbl"><b>Esa<br>Rautalinko</b></div></div><div class="n"><div class="lbl"><b>Tuija<br>Karanko</b></div></div></div></div></a>
     <div class="sem-body">
       <div class="sem-k">Kansallinen puolustusalan seminaari</div>
-      <h2><a href="https://seminaarit.kirsilehto.fi/puolustus">Mihin menet Eurooppa<br>- mihin Suomi?</a></h2>
+      <h2 id="sem-puolustus"><a href="https://seminaarit.kirsilehto.fi/puolustus">Mihin menet Eurooppa<br>- mihin Suomi?</a></h2>
       <dl class="sem-facts">
         <div><dt>Päivä</dt><dd>14 TAMMIKUU 2027</dd></div>
         <div><dt>Kello</dt><dd>13.00 - 16.00<span>Kahvit 12:30</span></dd></div>
@@ -72,10 +76,10 @@
     <a class="sem-top hero-ad" href="https://seminaarit.kirsilehto.fi/kasvu" tabindex="-1" aria-hidden="true"><div class="ad"><img src="/kuvat/hero-kasvu.webp" alt="" width="1600" height="726" loading="lazy"><div class="names"><div class="n"><div class="lbl"><b>Sami<br>Kotiniemi</b></div></div><div class="n"><div class="lbl"><b>Jukka<br>Leskelä</b></div></div><div class="n"><div class="lbl"><b>Aki<br>Kangasharju</b></div></div><div class="n"><div class="lbl"><b>Tiina<br>Laisi-Puheloinen</b></div></div></div></div></a>
     <div class="sem-body">
       <div class="sem-k">Kansallinen talouskasvun seminaari</div>
-      <h2><a href="https://seminaarit.kirsilehto.fi/kasvu">Rohkeutta ja energiaa<br>- mitä tarvitset, Suomi?</a></h2>
+      <h2 id="sem-kasvu"><a href="https://seminaarit.kirsilehto.fi/kasvu">Rohkeutta ja energiaa<br>- mitä tarvitset, Suomi?</a></h2>
       <dl class="sem-facts">
         <div><dt>Päivä</dt><dd>17 HELMIKUU 2027</dd></div>
-        <div><dt>Kello</dt><dd>13.00 - 16.00</dd></div>
+        <div><dt>Kello</dt><dd>13.00 - 16.00<span>Kahvit 12:30</span></dd></div>
         <div class="wide"><dt>Paikka</dt><dd>Museo Militaria, Tykkihalli<br><span>Vanhankaupunginkatu 19, Hämeenlinna</span></dd></div>
       </dl>
       <p>Talous, energia, startupit ja puolustus – mistä Suomen seuraava kasvu syntyy?</p>

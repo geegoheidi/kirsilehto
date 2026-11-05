@@ -538,3 +538,13 @@ footer .flinks,footer .social{display:flex;flex-wrap:wrap;justify-content:center
 footer .flinks a,footer .social a{color:var(--ink);text-decoration:none}
 footer .social a{color:var(--a)}
 footer a:hover{text-decoration:underline}
+
+/* Etusivun pikanapit seminaareihin: vain mobiilissa */
+.jump{display:none}
+.sem h2[id]{scroll-margin-top:112px}
+@media (max-width:860px){
+  .jump{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:26px auto 0}
+  .jump .btn{display:block;padding:15px 20px}
+  .jump .btn.kasvu{background:#01784E;color:#fff}
+  .jump .btn.kasvu:hover{background:#015c3c}
+}
